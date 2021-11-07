@@ -1,6 +1,6 @@
 # Crack-the-Interview
-Starting my preparation for coding interview : So let's dig in data structure algorithm.
-Goal : 1 algorithm per day at minimum !
+Starting my preparation for coding interview : So let's first dig into data structure algorithm.
+Goal : One algorithm per day at minimum !
 
 ---
 ### Binary Search : 
