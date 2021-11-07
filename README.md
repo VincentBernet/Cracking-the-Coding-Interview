@@ -20,6 +20,7 @@ const search = (nums, target) => {
     return -1;
 };
 ``` 
-<span> Conclusion : Instanciate two pointers, left and right, and at each iteration check the midle of the array by adjusting right or left. </span>
+**Conclusion** : Instanciate two pointers, left and right, and at each iteration check the midle of the array by adjusting right or left.
+
 ---
-dadad
+
