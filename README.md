@@ -1,6 +1,6 @@
 # Crack-the-Interview
-
-1 Data structure algorigh by day.
+Starting my preparation for coding interview : So let's dig in data structure algorithm.
+Goal : 1 algorithm per day at minimum !
 
 
 Binary Search : Given an ordenated array and a target number, give back the index of the target value inside the array, if it doesn't exist return -1. 
