@@ -4,8 +4,7 @@
 
 
 Binary Search : Given an ordenated array and a target number, give back the index of the target value inside the array, if it doesn't exist return -1. 
-
-
+```javascript
 const search = (nums, target) => {
     let left = 0, right = nums.length - 1;
     
@@ -19,5 +18,6 @@ const search = (nums, target) => {
     
     return -1;
 };
+```
 
 Instanciate two pointers, left and right, and at each iteration check the midle of the array by adjusting right or left. 
