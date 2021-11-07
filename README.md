@@ -23,3 +23,4 @@ const search = (nums, target) => {
 
 Conclusion : Instanciate two pointers, left and right, and at each iteration check the midle of the array by adjusting right or left. 
 ---
+dadad
