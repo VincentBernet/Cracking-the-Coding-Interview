@@ -1,6 +1,7 @@
 # Crack-the-Interview
 Starting my preparation for coding interview : So let's first dig into data structure algorithm.
 Goal : One algorithm per day at minimum, starting the seventh of november 2021 !
+Always aim for O(log(n)) complexity algorithm.
 
 ---
 ### Binary Search : 
@@ -26,7 +27,7 @@ const search = (nums, target) => {
 Don't forget to use round number with JS;
 
 ---
-### Alternative Binary Search : 
+### First Bad Version : 
 
 Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
 
@@ -59,6 +60,47 @@ var solution = function(isBadVersion) {
 ``` 
 **Conclusion** : Same logic as above 
 
+---
+### Search Insert Position :
+
+Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+
+You must write an algorithm with O(log n) runtime complexity.
+
+```javascript
+var searchInsert = function(nums, target) {
+    let left = 0;
+    let right = nums.length - 1;
+    
+    if (target > nums[right]) {
+        return right +1;
+    }
+    
+    if (target<nums[left]) {
+        return left;
+    }
+    
+    while (left <= right) {
+        let middle = Math.round(left + (right - left) / 2);
+        if (nums[middle] == target) {
+            return middle;
+        }
+        if (nums[middle] > target && nums[middle-1] < target) {
+            return middle;
+        }
+        if (nums[middle] < target && nums[middle+1] > target) {
+            return middle + 1;
+        }
+        if (nums[middle] > target) {
+            right = middle - 1;
+        }
+        else {
+            left = middle + 1; 
+        }
+    }
+};
+``` 
+**Conclusion** : Same logic as above
 ---
 
 
