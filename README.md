@@ -5,7 +5,7 @@ Always aim for O(log(n)) complexity algorithm.
 
 ---
 
-### Binary Search : 
+### Binary Search (Difficulty -> Easy) : 
 Given an ordenated array and a target number, give back the index of the target value inside the array, if it doesn't exist return -1. 
 ```javascript
 const search = (nums, target) => {
@@ -29,7 +29,7 @@ Don't forget to use round number with JS;
 
 ---
 
-### First Bad Version : 
+### First Bad Version (Difficulty -> Easy) : 
 
 Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
 
@@ -64,7 +64,7 @@ var solution = function(isBadVersion) {
 
 ---
 
-### Search Insert Position :
+### Search Insert Position (Difficulty -> Easy) :
 
 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
@@ -107,7 +107,7 @@ var searchInsert = function(nums, target) {
 
 ---
 
-### Squares of a Sorted Array :
+### Squares of a Sorted Array (Difficulty -> Easy) :
 
 Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 
@@ -134,6 +134,46 @@ var sortedSquares = function(nums) {
 ``` 
 **Conclusion** : Same logic as above
 
+---
+
+---
+
+### Rotate Array (Difficulty -> Medium) :
+
+Given an array, rotate the array to the right by k steps, where k is non-negative.
+
+```javascript
+var rotate = function(nums, k) {
+    
+    // array.push(); créer une nouvelle value à la fin d'un array
+    // array.unshift(); créer une nouvelle value au début d'un array
+    // array.shift(); supprime la première value d'un array
+    // array.pop(); supprime la dernière value d'un array
+        
+    /* Bonne idée, mais trop lents, complexity of O(n)
+        let right = nums.length - 1;
+        for (i=0;i<k;i++) {
+            nums.unshift(nums[right]);
+            nums.pop();
+        } 
+    */
+    
+    k %= nums.length;
+    console.log(k);
+    reverse(nums, 0, nums.length - 1);
+    reverse(nums, 0, k - 1);
+    reverse(nums, k, nums.length - 1);
+};
+
+const reverse = (nums, from, to) => {
+    for (let i = from, j = to; i < j; i++, j--) {
+        let leftAuxiliary = nums[i];
+        nums[i] = nums[j];
+        nums[j] = leftAuxiliary;
+    }
+}
+``` 
+**Conclusion** : Need to work on it, don't know how to think of that algorithm by myself
 ---
 
 
