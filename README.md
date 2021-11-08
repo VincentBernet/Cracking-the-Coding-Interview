@@ -5,7 +5,7 @@ Always aim for O(log(n)) complexity algorithm.
 
 ---
 
-### Binary Search (Difficulty -> Easy) : 
+### Binary Search (Difficulty -> Easy) : Day One
 Given an ordenated array and a target number, give back the index of the target value inside the array, if it doesn't exist return -1. 
 ```javascript
 const search = (nums, target) => {
@@ -29,7 +29,7 @@ Don't forget to use round number with JS;
 
 ---
 
-### First Bad Version (Difficulty -> Easy) : 
+### First Bad Version (Difficulty -> Easy) : Day Two
 
 Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
 
@@ -64,7 +64,7 @@ var solution = function(isBadVersion) {
 
 ---
 
-### Search Insert Position (Difficulty -> Easy) :
+### Search Insert Position (Difficulty -> Easy) : Day Three
 
 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
@@ -107,7 +107,7 @@ var searchInsert = function(nums, target) {
 
 ---
 
-### Squares of a Sorted Array (Difficulty -> Easy) :
+### Squares of a Sorted Array (Difficulty -> Easy) : Day Three
 
 Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 
@@ -138,7 +138,7 @@ var sortedSquares = function(nums) {
 
 ---
 
-### Rotate Array (Difficulty -> Medium) :
+### Rotate Array (Difficulty -> Medium) : Day Three
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.
 
@@ -176,7 +176,7 @@ const reverse = (nums, from, to) => {
 **Conclusion** : Need to work on it, don't know how to think of that algorithm by myself
 ---
 
-### Move Zeroes (Difficulty -> Easy) :
+### Move Zeroes (Difficulty -> Easy) : Day Three
 
 Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
