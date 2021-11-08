@@ -4,6 +4,7 @@ Goal : One algorithm per day at minimum, starting the seventh of november 2021 !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
+
 ### Binary Search : 
 Given an ordenated array and a target number, give back the index of the target value inside the array, if it doesn't exist return -1. 
 ```javascript
@@ -27,6 +28,7 @@ const search = (nums, target) => {
 Don't forget to use round number with JS;
 
 ---
+
 ### First Bad Version : 
 
 Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
@@ -61,6 +63,7 @@ var solution = function(isBadVersion) {
 **Conclusion** : Same logic as above 
 
 ---
+
 ### Search Insert Position :
 
 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
@@ -101,6 +104,7 @@ var searchInsert = function(nums, target) {
 };
 ``` 
 **Conclusion** : Same logic as above
+
 ---
 
 
