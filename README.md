@@ -176,5 +176,26 @@ const reverse = (nums, from, to) => {
 **Conclusion** : Need to work on it, don't know how to think of that algorithm by myself
 ---
 
+### Move Zeroes (Difficulty -> Easy) :
+
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+Note that you must do this in-place without making a copy of the array.
+
+```javascript
+var moveZeroes = function(nums) {
+    for (let i = nums.length; i>=0 ; i--) {
+        if (nums[i] === 0) {
+            nums.splice(i,1);
+            nums.push(0);
+        }
+    }
+};
+``` 
+**Conclusion** : Splice very useful to delete specific value of an array, don't forget to start looping through the end of the array to avoid looping infinitly on the 0 you add. 
+
+---
+
+
 
 
