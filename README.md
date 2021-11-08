@@ -10,8 +10,9 @@ const search = (nums, target) => {
     let left = 0, right = nums.length - 1;
     
     while (left <= right) {
-        let mid = (left + (right-left) / 2) | 0; // or use Math.round((left + right) / 2); Same things
-        /* Better to use left + (right-left)/2 than (right+left)/2
+        let mid = (left + (right-left) / 2) | 0; 
+        /* Can use Math.round((left + right) / 2) instead of | 0, same thing
+           Better to use left + (right-left)/2 than (right+left)/2
            Because integer limite size, can block sometimes */
         if (nums[mid] === target) { return mid; }
         if (nums[mid] > target) { right = mid - 1; }
