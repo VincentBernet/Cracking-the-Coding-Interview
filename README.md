@@ -107,5 +107,34 @@ var searchInsert = function(nums, target) {
 
 ---
 
+### Squares of a Sorted Array :
+
+Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+
+```javascript
+var sortedSquares = function(nums) {
+    let numsBySquare = [];
+    let left = 0;
+    let right = nums.length - 1;
+    let i = nums.length-1;
+    
+    while (left <= right) {
+        if (nums[left] * nums[left] >= nums[right] * nums[right]) {
+            numsBySquare[i] = nums[left] * nums[left];
+            left += 1;
+        }
+        else {
+            numsBySquare[i] = nums[right] * nums[right];
+            right -= 1;
+        }
+        i --;
+    }
+    return numsBySquare;
+};
+``` 
+**Conclusion** : Same logic as above
+
+---
+
 
 
