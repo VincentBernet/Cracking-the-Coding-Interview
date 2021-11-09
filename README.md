@@ -1,4 +1,4 @@
-# Crack-the-Interview
+# Cracking-the-Coding-Interview
 Starting my preparation for coding interview : So let's first dig into data structure algorithm.
 Goal : One algorithm per day at minimum, starting the seventh of november 2021 !
 Always aim for O(log(n)) complexity algorithm.
