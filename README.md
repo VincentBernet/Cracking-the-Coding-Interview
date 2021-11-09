@@ -228,6 +228,30 @@ var twoSum = function(numbers, target) {
 
 ---
 
+### Reverse String (Difficulty -> Easy) : Day Four
+
+Write a function that reverses a string. The input string is given as an array of characters s.
+
+```javascript
+// Goes throught the whole array simultanisly by the left and right, 
+// And at each iteration reverse the values of the pointer index
+var reverseString = function(s) {
+    let left = 0;
+    let right = s.length - 1;
+    
+    while (left <= right) {
+        let leftAuxiliary = s[left];
+        s[left] = s[right];
+        s[right] = leftAuxiliary;
+        left ++;
+        right --;
+    };
+    return s;
+};
+``` 
+**Conclusion** : Goes throught the whole array simultanisly by the left and right, and at each iteration reverse the values of the pointer index
+
+---
 
 
 
