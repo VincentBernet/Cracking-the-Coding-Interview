@@ -252,7 +252,50 @@ var reverseString = function(s) {
 **Conclusion** : Goes throught the whole array simultanisly by the left and right, and at each iteration reverse the values of the pointer index
 
 ---
+### Reverse Words in a String III (Difficulty -> Easy) : Day Five
 
+Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+
+```javascript
+First Solution : Not optimal, complexity of O(n)
+var reverseWords = function(s) {
+    let reversedArray = [];
+    let currentWord = [];
+    let reversedWord = [];
+    s += " ";
+    for (i=0;i<s.length;i++) {
+        if (s.charAt(i) === " ") {
+            reversedWord = reverse(currentWord);
+            reversedArray = reversedArray.concat(reversedWord);
+            reversedArray.push(" ");
+            currentWord = [];
+        }
+        else {
+            currentWord.push(s[i]);
+        }
+    }
+    reversedArray.pop();
+    let reversedString = reversedArray.join('');
+    return reversedString;
+};
+
+function reverse(wordArray) {
+    let left = 0;
+    let right = wordArray.length - 1;
+    
+    while (left<=right) {
+        let leftAuxialiary = wordArray[left];
+        wordArray[left] = wordArray[right];
+        wordArray[right] = leftAuxialiary;
+        left ++;
+        right --;
+    }
+    return wordArray;
+}
+``` 
+**Conclusion** : 
+
+---
 
 
 
