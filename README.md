@@ -257,7 +257,7 @@ var reverseString = function(s) {
 Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
 
 ```javascript
-First Solution : Not optimal, complexity of O(n)
+// First Solution : Not optimal, complexity of O(n)
 var reverseWords = function(s) {
     let reversedArray = [];
     let currentWord = [];
