@@ -296,6 +296,28 @@ function reverse(wordArray) {
 **Conclusion** : 
 
 ---
+### Middle of the Linked List (Difficulty -> Easy) : Day Five
+
+Given the head of a singly linked list, return the middle node of the linked list.
+
+If there are two middle nodes, return the second middle node.
+```javascript
+var middleNode = function(head) {
+    let slow = head, fast = head;
+    while (fast !== null) {
+        fast = fast.next;
+        if (fast == null) break;
+        else fast = fast.next;
+        
+        slow = slow.next;
+    }
+    return slow;
+};
+``` 
+**Conclusion** : Instantiate another list and increment it two times faster in the following loop that go through the initial linked list with list.next.
+
+---
+
 
 
 
