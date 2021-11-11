@@ -173,7 +173,7 @@ const reverse = (nums, from, to) => {
     }
 }
 ``` 
-**Conclusion** : Need to work on it, don't know how to think of that algorithm by myself
+**Conclusion** : ⚠️ TODO -> Need to work on it | Don't know how to think of that algorithm by myself
 ---
 
 ### Move Zeroes (Difficulty -> Easy) : Day Three
@@ -293,7 +293,7 @@ function reverse(wordArray) {
     return wordArray;
 }
 ``` 
-**Conclusion** : 
+**Conclusion** : ⚠️ TODO -> Need to work on it | 
 
 ---
 ### Middle of the Linked List (Difficulty -> Easy) : Day Five
