@@ -324,7 +324,13 @@ var middleNode = function(head) {
 
 ---
 
+---
 
+### Reviewing previous algorithms : Day Six
 
+---
 
+### Reading Cracking The Coding Interview 6th Edition : Day Six
+
+---
 
