@@ -326,7 +326,7 @@ var middleNode = function(head) {
 
 ---
 
-### Reviewing previous algorithms : Day Six
+### Reviewing previous algorithms : Day Seven
 
 ---
 
