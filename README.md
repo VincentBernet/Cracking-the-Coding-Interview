@@ -334,3 +334,20 @@ var middleNode = function(head) {
 
 ---
 
+const removeNthFromEnd = (head, n) => {
+    let slow = head, fast = head;
+    while (n>0) {
+        fast = fast.next;
+        n--;
+    }
+    while (fast && fast.next) {
+            slow = slow.next;
+            fast = fast.next;
+    }
+    if (!fast){
+        return head.next;
+    }
+    slow.next = slow.next.next;
+    return head;
+}
+
