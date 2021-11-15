@@ -332,8 +332,14 @@ var middleNode = function(head) {
 
 ### Reading Cracking The Coding Interview 6th Edition : Day Six
 
----
+Big O notation, it means the time complexity of an algorithm. The notation possible are : O(n), O(log(n)), O(n²), O(n\*log(n)) . Because we always git rid of constants, because we don't focus at all on the litle complexity. For example we won't have a complexity of O(2n) if we have go through two times of a n array size, we would just put O(n).
 
+O(log(n)) << O(n\*log(n)) << O(n) << O(n²) << O(e²n)
+
+---
+### Remove Nth Node From End of List (Difficulty -> Easy) : Day Seven
+
+```javascript
 const removeNthFromEnd = (head, n) => {
     let slow = head, fast = head;
     while (n>0) {
@@ -350,4 +356,6 @@ const removeNthFromEnd = (head, n) => {
     slow.next = slow.next.next;
     return head;
 }
+```
+---
 
