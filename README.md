@@ -357,5 +357,5 @@ const removeNthFromEnd = (head, n) => {
     return head;
 }
 ```
----
+----
 
