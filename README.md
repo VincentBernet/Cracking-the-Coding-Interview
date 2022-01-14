@@ -136,8 +136,6 @@ var sortedSquares = function(nums) {
 
 ---
 
----
-
 ### Rotate Array (Difficulty -> Medium) : Day Three
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.
@@ -321,8 +319,6 @@ var middleNode = function(head) {
 };
 ``` 
 **Conclusion** : Instantiate another list and increment it two times faster in the following loop that go through the initial linked list with list.next.
-
----
 
 ---
 
