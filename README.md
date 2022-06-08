@@ -352,7 +352,7 @@ const removeNthFromEnd = (head, n) => {
 }
 ```
 ---
-### 14] Remove Nth Node From End of List (Difficulty -> Easy) : Day 90<sup>th</sup>
+### 14] Remove Nth Node From End of List (Difficulty -> Easy) : Day 10<sup>th</sup>
 
 ```javascript
 function twoNumberSum(array, targetSum) {
@@ -368,6 +368,37 @@ function twoNumberSum(array, targetSum) {
 		}
 	}
 	return [];
+}
+```
+----
+### 15] Longuest Peak (Difficulty -> Easy) : Day 11<sup>th</sup>
+
+```javascript
+function longestPeak(array) {
+  longestPeakLength = 0;
+  let i = 1;
+  while (i < array.length-1) {
+    const isPeak = (array[i - 1] < array[i] && array[i+1] < array[i])
+    if (!isPeak) {
+      i += 1;
+      continue;
+    } 
+    leftIdx = i - 2;
+    while (leftIdx >= 0 && array[leftIdx] < array[leftIdx + 1] )
+      {
+        leftIdx --;
+      }
+    rightIdx = i + 2;
+    while (rightIdx < array.length && array[rightIdx] < array[rightIdx - 1]) {
+          rightIdx += 1;
+    }
+
+     const currentPeakLength = rightIdx - leftIdx - 1;
+    longestPeakLength = Math.max(longestPeakLength, currentPeakLength);
+    i = rightIdx;
+
+  }
+  return longestPeakLength;
 }
 ```
 ----
