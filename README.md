@@ -1,11 +1,11 @@
 # Cracking-the-Coding-Interview
 Starting my preparation for coding interview : So let's first dig into data structure algorithm.
-Goal : One algorithm per day at minimum, starting the seventh of november 2021 !
+Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
 
-### 1] Binary Search (Difficulty -> Easy) : Day One
+### 1] Binary Search (Difficulty -> Easy)
 Given an ordenated array and a target number, give back the index of the target value inside the array, if it doesn't exist return -1. 
 ```javascript
 const search = (nums, target) => {
@@ -29,7 +29,7 @@ Don't forget to use round number with JS;
 
 ---
 
-### 2] First Bad Version (Difficulty -> Easy) : Day Two
+### 2] First Bad Version (Difficulty -> Easy)
 
 Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
 
@@ -64,7 +64,7 @@ var solution = function(isBadVersion) {
 
 ---
 
-### 3] Search Insert Position (Difficulty -> Easy) : Day Three
+### 3] Search Insert Position (Difficulty -> Easy)
 
 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
@@ -107,7 +107,7 @@ var searchInsert = function(nums, target) {
 
 ---
 
-### 4] Squares of a Sorted Array (Difficulty -> Easy) : Day Three
+### 4] Squares of a Sorted Array (Difficulty -> Easy)
 
 Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 
@@ -136,7 +136,7 @@ var sortedSquares = function(nums) {
 
 ---
 
-### 5] Rotate Array (Difficulty -> Medium) : Day Three
+### 5] Rotate Array (Difficulty -> Medium)
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.
 
@@ -174,7 +174,7 @@ const reverse = (nums, from, to) => {
 **Conclusion** : ⚠️ TODO -> Need to work on it | Don't know how to think of that algorithm by myself
 
 ---
-### 6] Move Zeroes (Difficulty -> Easy) : Day Three
+### 6] Move Zeroes (Difficulty -> Easy)
 
 Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
@@ -193,7 +193,7 @@ var moveZeroes = function(nums) {
 **Conclusion** : Splice very useful to delete specific value of an array, don't forget to start looping through the end of the array to avoid looping infinitly on the 0 you add. 
 
 ---
-### 8] Two Sum II - Input Array Is Sorted (Difficulty -> Easy) : Day Four
+### 8] Two Sum II - Input Array Is Sorted (Difficulty -> Easy)
 
 Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
 
@@ -225,7 +225,7 @@ var twoSum = function(numbers, target) {
 
 ---
 
-### 9] Reverse String (Difficulty -> Easy) : Day Four
+### 9] Reverse String (Difficulty -> Easy)
 
 Write a function that reverses a string. The input string is given as an array of characters s.
 
@@ -249,7 +249,7 @@ var reverseString = function(s) {
 **Conclusion** : Goes throught the whole array simultanisly by the left and right, and at each iteration reverse the values of the pointer index
 
 ---
-### 10] Reverse Words in a String III (Difficulty -> Easy) : Day Five
+### 10] Reverse Words in a String III (Difficulty -> Easy)
 
 Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
 
@@ -298,7 +298,7 @@ function reverse(wordArray) {
     In computer science, a linked list is a linear collection of data elements whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence. In its most basic form, each node contains: data, and a reference (in other words, a link) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration. More complex variants add additional links, allowing more efficient insertion or removal of nodes at arbitrary positions. A drawback of linked lists is that access time is linear (and difficult to pipeline). Faster access, such as random access, is not feasible. Arrays have better cache locality compared to linked lists.
 
 ---
-### 11] Middle of the Linked List (Difficulty -> Easy) : Day Five
+### 11] Middle of the Linked List (Difficulty -> Easy)
 
 Given the head of a singly linked list, return the middle node of the linked list.
 
@@ -320,18 +320,18 @@ var middleNode = function(head) {
 
 ---
 
-### Reviewing previous algorithms : Day Seven
+### Reviewing previous algorithms 
 
 ---
 
-### 12] Reading Cracking The Coding Interview 6th Edition : Day Eight
+### 12] Reading Cracking The Coding Interview 6th Edition
 
 Big O notation, it means the time complexity of an algorithm. The notation possible are : O(n), O(log(n)), O(n²), O(n\*log(n)) . Because we always git rid of constants, because we don't focus at all on the litle complexity. For example we won't have a complexity of O(2n) if we have go through two times of a n array size, we would just put O(n).
 
 O(log(n)) << O(n\*log(n)) << O(n) << O(n²) << O(e²n)
 
 ---
-### 13] Remove Nth Node From End of List (Difficulty -> Easy) : Day Nine
+### 13] Remove Nth Node From End of List (Difficulty -> Easy)
 
 ```javascript
 const removeNthFromEnd = (head, n) => {
@@ -352,7 +352,7 @@ const removeNthFromEnd = (head, n) => {
 }
 ```
 ---
-### 14] Remove Nth Node From End of List (Difficulty -> Easy) : Day 10<sup>th</sup>
+### 14] Remove Nth Node From End of List (Difficulty -> Easy)
 
 ```javascript
 function twoNumberSum(array, targetSum) {
@@ -371,7 +371,7 @@ function twoNumberSum(array, targetSum) {
 }
 ```
 ----
-### 15] Longuest Peak (Difficulty -> Easy) : Day 11<sup>th</sup>
+### 15] Longuest Peak (Difficulty -> Easy)
 
 ```javascript
 function longestPeak(array) {
@@ -402,4 +402,16 @@ function longestPeak(array) {
 }
 ```
 ----
+
+### 16] Doing an Amazon coding test : first question (Difficulty -> Easy)
+
+Not allowed to display the coding question here, though it was about testing the strenght of a password by checking the number of vowels and consonne combinason, solve it in O(n) time complexity by going through the password length.
+
+----
+### 17] Doing an Amazon coding test : second question (Difficulty -> Medium)
+
+Didn't manage to do it properly, was about database querry for displaying cheepest product to a client at each iteration.
+Needed to sort by price, then by product name in case of same price, had some trouble to manage the type in this DSA.
+
+---
 
