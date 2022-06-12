@@ -414,4 +414,46 @@ Didn't manage to do it properly, was about database querry for displaying cheepe
 Needed to sort by price, then by product name in case of same price, had some trouble to manage the type in this DSA.
 
 ---
+### 18] Smallest Difference (Difficulty -> Easy)
 
+  Write a function that takes in two non-empty arrays of integers, finds the
+  pair of numbers (one from each array) whose absolute difference is closest to
+  zero, and returns an array containing these two numbers, with the number from
+  the first array in the first position.
+  Note that the absolute difference of two integers is the distance between
+  them on the real number line. For example, the absolute difference of -5 and 5
+  is 10, and the absolute difference of -5 and -4 is 1.
+  You can assume that there will only be one pair of numbers with the smallest
+  difference.
+
+```javascript
+function smallestDifference(arrayOne, arrayTwo) {
+  // Brute force, itterate through both array, n * n iteration O(n^2), horrible solution
+  // Here it will be O(n*log(n) + m*log(m))
+  arrayOne.sort((a, b) => (a - b));
+  arrayTwo.sort((a, b) => (a - b));
+  let indexOne = 0;
+  let indexTwo = 0;
+  let smallestDiff = Infinity;
+  let currentDiff = Infinity;
+  let smallestPair = [];
+  while (indexOne < arrayOne.length && indexTwo < arrayTwo.length) {
+    let firstNum = arrayOne[indexOne];
+    let secondNum = arrayTwo[indexTwo];
+    if (firstNum < secondNum) {
+      currentDiff = secondNum - firstNum;
+      indexOne++;
+    } else if (secondNum < firstNum) {
+      currentDiff = firstNum - secondNum;
+      indexTwo++;
+    } else {
+      return [firstNum, secondNum];
+    }
+    if (smallestDiff > currentDiff) {
+      smallestDiff = currentDiff;
+      smallestPair = [firstNum, secondNum];
+    }
+  }
+  return smallestPair;
+}
+```
