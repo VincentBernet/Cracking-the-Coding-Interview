@@ -371,7 +371,7 @@ function twoNumberSum(array, targetSum) {
 }
 ```
 ----
-### 15] Longuest Peak (Difficulty -> Easy)
+### 15] Longuest Peak (Difficulty -> Medium)
 
 ```javascript
 function longestPeak(array) {
@@ -414,7 +414,7 @@ Didn't manage to do it properly, was about database querry for displaying cheepe
 Needed to sort by price, then by product name in case of same price, had some trouble to manage the type in this DSA.
 
 ---
-### 18] Smallest Difference (Difficulty -> Easy)
+### 18] Smallest Difference (Difficulty -> Medium)
 
   Write a function that takes in two non-empty arrays of integers, finds the
   pair of numbers (one from each array) whose absolute difference is closest to
@@ -457,3 +457,45 @@ function smallestDifference(arrayOne, arrayTwo) {
   return smallestPair;
 }
 ```
+---
+### 19] Array of products (Difficulty -> Medium)
+
+  
+  Write a function that takes in a non-empty array of integers and returns an
+  array of the same length, where each element in the output array is equal to
+  the product of every other number in the input array.
+  
+  <p>
+    In other words, the value at <span>output[i]</span> is equal to the product of
+    every number in the input array other than <span>input[i]</span>.
+  </p>
+  <p>
+    Note that you're expected to solve this problem without using division.
+  </p>
+  
+```javascript
+function arrayOfProducts(array) {
+  // brutforce way, O(n^2), ici O(n)
+  let productArray = new Array(array.length).fill(1);
+  let leftArray = new Array(array.length).fill(1);
+  let rightArray = new Array(array.length).fill(1);
+
+  let currentLeftProduct = 1;
+  for (let i=0; i < array.length; i++) {
+    leftArray[i] = currentLeftProduct;
+    currentLeftProduct *= array[i];
+  }
+
+  let currentRightProduct = 1;
+  for (let i=array.length-1; i > -1; i--) {
+    rightArray[i] = currentRightProduct;
+    currentRightProduct *= array[i];
+  }
+  
+  for (i=0; i < array.length; i++) {
+    productArray[i] = leftArray[i]*rightArray[i]
+  }
+  return productArray;
+}
+```
+---
