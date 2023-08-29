@@ -4,7 +4,52 @@ Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
+### 1] Merge Strings Alternately (Difficulty -> Easy)
+You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
 
+Return the merged string.
+### Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+First thoughts that i needed to simply iterate through a for loop to add each letter of each words, and to use the bigger word length as limit.
+### Approach
+<!-- Describe your approach to solving the problem. -->
+Implemented my Intuition, then saw i needed to check the edge case where a word can be longer than the other one, so add if statement in the loop to add only if the word is not already completed added.
+### Complexity
+- Time complexity:
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+O(n, m) = O(max(m, n))
+
+- Space complexity:
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+O(n, m) = O(max(m, n))
+
+```javascript
+/**
+ * @param {string} word1
+ * @param {string} word2
+ * @return {string}
+ */
+var mergeAlternately = function(word1, word2) {
+    let biggerLength;
+    if (word1.length > word2.length) {
+        biggerLength = word1.length;
+    }
+    else { 
+        biggerLength = word2.length;
+    }
+    let mergedWords = "";
+    for (i=0; i < biggerLength; i++) {
+        if (i < word1.length) {
+            mergedWords += word1[i];
+        }
+        if (i < word2.length) {
+            mergedWords += word2[i];
+        }
+    }
+    return mergedWords;
+};
+```
+---
 ### 1] Binary Search (Difficulty -> Easy)
 Given an ordenated array and a target number, give back the index of the target value inside the array, if it doesn't exist return -1. 
 ```javascript
@@ -498,4 +543,3 @@ function arrayOfProducts(array) {
   return productArray;
 }
 ```
----
