@@ -4,6 +4,41 @@ Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
+### 2] Greatest Common Divisor of Strings (Difficulty -> Easy)
+Wasn't easy for me, needeed to check a solution to put me on hint. Wanted to use modulo operation x % y === 0 but it was in the other way needed to utilize it in an algorithm to calculate GCD.
+
+### Complexity
+- Time complexity => O(n, m) = O(n)
+
+- Space complexity => O(n, m) = O(1)
+
+
+```javascript
+/**
+ * @param {string} str1
+ * @param {string} str2
+ * @return {string}
+ */
+var gcdOfStrings = function(str1, str2) {
+    // Check if nothing can divid both of strings
+    if (str1 + str2 !== str2 + str1) {
+        return "";
+    }
+    // Calculate GCD (Greatest Common Divisor) of both length
+    let temp;
+    let curStr1Len = str1.length;
+    let curStr2Len = str2.length;
+    while (curStr2Len != 0)
+    {
+        temp = curStr1Len % curStr2Len;
+        curStr1Len = curStr2Len;
+        curStr2Len = temp;
+    }
+    // Return the substring up to the GCD
+    return str1.slice(0, curStr1Len);
+};
+```
+---
 ### 1] Merge Strings Alternately (Difficulty -> Easy)
 You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
 
