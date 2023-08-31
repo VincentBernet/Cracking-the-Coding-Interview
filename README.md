@@ -4,6 +4,37 @@ Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
+### 3] Kids With the Greatest Number of Candies (Difficulty -> Easy)
+This one was easier.
+
+### Complexity
+- Time complexity => O(n) = O(n)
+
+- Space complexity => O(n) = O(1)
+
+
+```javascript
+/**
+ * @param {number[]} candies
+ * @param {number} extraCandies
+ * @return {boolean[]}
+ */
+var kidsWithCandies = function(candies, extraCandies) {
+    // First itterate through candies array to get maxCandies
+    let maxCandies = candies[0];
+    for (i=1; i<candies.length; i++) {
+        (candies[i] > maxCandies) && (maxCandies = candies[i]); 
+    }
+    
+    // Then reiteratte through this array, add extraCandies & compare with maxCandies
+    let result = [];
+    for (y=0; y<candies.length; y++) {
+        result.push(candies[y] + extraCandies >= maxCandies);
+    }
+    return result;
+};
+```
+---
 ### 2] Greatest Common Divisor of Strings (Difficulty -> Easy)
 Wasn't easy for me, needeed to check a solution to put me on hint. Wanted to use modulo operation x % y === 0 but it was in the other way needed to utilize it in an algorithm to calculate GCD.
 
