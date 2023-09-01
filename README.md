@@ -4,6 +4,36 @@ Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
+### 4] Can Place Flowers (Difficulty -> Easy)
+Same not very tricky
+
+### Complexity
+- Time complexity => O(n)
+
+- Space complexity => O(1)
+
+
+```javascript
+/**
+ * @param {number[]} flowerbed
+ * @param {number} n
+ * @return {boolean}
+ */
+var canPlaceFlowers = function(flowerbed, n) {
+    let possibleNewFlower = 0;
+    for (i=0; i<flowerbed.length; i++) {
+        if (flowerbed[i] === 0 && flowerbed[i+1] !== 1  && flowerbed[i-1] !== 1) {
+            possibleNewFlower++;
+            if (possibleNewFlower >= n) {
+             return true;
+            }
+            i++;
+        }
+    }
+    return possibleNewFlower >= n;
+};
+```
+---
 ### 3] Kids With the Greatest Number of Candies (Difficulty -> Easy)
 This one was easier.
 
