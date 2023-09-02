@@ -4,7 +4,7 @@ Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
-### 5] Reverse Words in a String (Difficulty -> Medium)
+### 6] Reverse Words in a String (Difficulty -> Medium)
 Two pointers, but reverse only words, needed to filter all redondant space.
 
 ### Complexity
