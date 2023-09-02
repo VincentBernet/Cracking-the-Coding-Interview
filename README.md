@@ -4,6 +4,51 @@ Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
+### 5] Reverse Vowels of a String (Difficulty -> Easy)
+Two pointers, but reverse only for Vowels
+
+### Complexity
+- Time complexity => O(n)
+
+- Space complexity => O(1)
+
+
+```javascript
+/**
+ * @param {string} s
+ * @return {string}
+ */
+const isVoyelle = (letter) => {
+    return (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u" 
+        || letter === "A" || letter === "E" || letter === "I" || letter === "O" || letter === "U");
+}
+
+var reverseVowels = function(s) {
+    let resultArray = s.split('');
+    let temp;
+    let left = 0;
+    let right = resultArray.length - 1;
+    
+    while (left < right) {
+        if (isVoyelle(resultArray[left]) && isVoyelle(resultArray[right])) {
+            temp = resultArray[left];
+            resultArray[left] = resultArray[right];
+            resultArray[right] = temp;
+            right --;
+            left ++;
+        }
+        else if (!isVoyelle(resultArray[left])) {
+            left ++;
+        }
+        else if (!isVoyelle(resultArray[right])) {
+            right --;
+        }
+    }
+
+    return resultArray.join('');
+};
+```
+---
 ### 4] Can Place Flowers (Difficulty -> Easy)
 Same not very tricky
 
