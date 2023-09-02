@@ -4,6 +4,37 @@ Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
+### 5] Reverse Words in a String (Difficulty -> Medium)
+Two pointers, but reverse only words, needed to filter all redondant space.
+
+### Complexity
+- Time complexity => O(n)
+
+- Space complexity => O(n)
+
+
+```javascript
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var reverseWords = function(s) {
+    let listOfWords = s.split(' ');
+    let resultArray = listOfWords.filter(word => word !== '');
+    let left = 0;
+    let right = resultArray.length - 1;
+    let temp;
+    while (left < right) {
+        temp = resultArray[left];
+        resultArray[left] = resultArray[right];
+        resultArray[right] = temp;
+        left ++;
+        right --;
+    }
+    return resultArray.join(' ');
+};
+```
+---
 ### 5] Reverse Vowels of a String (Difficulty -> Easy)
 Two pointers, but reverse only for Vowels
 
