@@ -4,6 +4,34 @@ Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
+### 8] Is Subsequence (Difficulty -> easy)
+Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+
+A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., "ace" is a subsequence of "abcde" while "aec" is not).
+
+### Complexity
+- Time complexity => O(n)
+
+- Space complexity => O(1)
+
+
+```javascript
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isSubsequence = function(s, t) {
+    let pointerS = 0
+    for (i=0; i < t.length; i++) {
+        if (s[pointerS] === t[i]) {
+            pointerS++;
+        }
+    }
+    return pointerS === s.length;
+};
+```
+---
 ### 7] Move Zeroes to the end of array (Difficulty -> easy)
 Two pointers, but reverse only words, needed to filter all redondant space.
 
