@@ -4,6 +4,42 @@ Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
+### 7] Move Zeroes to the end of array (Difficulty -> easy)
+Two pointers, but reverse only words, needed to filter all redondant space.
+
+### Complexity
+- Time complexity => O(n)
+
+- Space complexity => O(n)
+
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function(nums) {
+    // On initialise deux pointeurs
+    let low = 0;
+    let high = low + 1;
+    
+    while (high <= nums.length -1) {
+        if (nums[low] !== 0) {
+            low++;
+            high++;
+        }
+        else {
+            if (nums[high] !== 0) {
+                nums[low] = nums[high]
+                nums[high] = 0;
+                low++;
+            }
+            high++;
+        }
+    }
+};
+```
+---
 ### 6] Reverse Words in a String (Difficulty -> Medium)
 Two pointers, but reverse only words, needed to filter all redondant space.
 
