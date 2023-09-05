@@ -4,6 +4,49 @@ Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
+### 8] Find the Highest Altitude (Difficulty -> easy)
+There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
+
+You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). Return the highest altitude of a point.
+
+ 
+
+Example 1:
+
+Input: gain = [-5,1,5,0,-7]
+Output: 1
+Explanation: The altitudes are [0,-5,-4,1,1,-6]. The highest is 1.
+Example 2:
+
+Input: gain = [-4,-3,-2,-1,4,3,2]
+Output: 0
+Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
+
+### Complexity
+- Time complexity => O(n)
+
+- Space complexity => O(n) but i can do a version of O(1)
+
+
+```javascript
+/**
+ * @param {number[]} gain
+ * @return {number}
+ */
+var largestAltitude = function(gain) {
+    // On peut améliorer cette algo en passant par une variable intermédiaire qui fait la somme des altitudes plutôt qu'en passant par un tableau altitudeArray
+    let highestAltitude = 0;
+    let altitudeArray = [0];
+    for (i=0; i < gain.length; i++) {
+        altitudeArray.push(altitudeArray[i] + gain[i]);
+        if (altitudeArray[i+1] > highestAltitude) {
+            highestAltitude = altitudeArray[i+1];
+        }
+    } 
+    return highestAltitude;
+};
+```
+---
 ### 8] Is Subsequence (Difficulty -> easy)
 Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
 
