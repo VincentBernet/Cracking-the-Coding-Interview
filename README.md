@@ -4,6 +4,37 @@ Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
 ---
+### 8] find-the-middle-index-in-array (Difficulty -> easy)
+
+### Complexity
+- Time complexity => O(n)
+
+- Space complexity => O(1)
+
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var pivotIndex = function(nums) {
+    let rightSums = 0;
+    let leftSums = 0;
+    // On calcule le max total
+    for (e of nums) {
+        rightSums += e;
+    }
+    for (i=0; i < nums.length -1; i++) {
+        rightSums -= nums[i];
+            if (rightSums === leftSums) {
+                return i;
+            }
+            leftSums += nums[i];
+    }
+    return -1;
+};
+```
+---
 ### 8] Find the Highest Altitude (Difficulty -> easy)
 There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
 
