@@ -3,6 +3,54 @@ Starting my preparation for coding interview : So let's first dig into data stru
 Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
+### 9] Guess Number Higher or Lower (Difficulty -> easy)
+
+### Complexity
+- Time complexity => O(log(n))
+
+- Space complexity => O(1)
+
+
+```javascript
+/** 
+ * Forward declaration of guess API.
+ * @param {number} num   your guess
+ * @return 	     -1 if num is higher than the picked number
+ *			      1 if num is lower than the picked number
+ *               otherwise return 0
+ * var guess = function(num) {}
+ */
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var guessNumber = function(n) {
+    /* Brute force way
+    for (i=1; i <= n; i++) {
+        if (guess(i) === 0) {
+            return i;
+        }
+    } */
+    let maxPointer = n;
+    let minPointer = 1;
+    let middle = (minPointer + maxPointer) / 2;
+    while (minPointer < maxPointer) {
+        if (guess(middle) === 0) {
+            return middle;
+        }
+        else if (guess(middle) === 1) {
+            minPointer = middle;
+        }
+        else if (guess(middle) === -1) {
+            maxPointer = middle;
+        }
+        middle = (minPointer + maxPointer) / 2;
+    }
+    return middle;
+};
+```
+---
 ---
 ### 8] find-the-middle-index-in-array (Difficulty -> easy)
 
