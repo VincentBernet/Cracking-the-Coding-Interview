@@ -3,7 +3,7 @@ Starting my preparation for coding interview : So let's first dig into data stru
 Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
-### 9] Guess Number Higher or Lower (Difficulty -> easy)
+### 10] Guess Number Higher or Lower (Difficulty -> easy)
 
 ### Complexity
 - Time complexity => O(log(n))
@@ -51,8 +51,7 @@ var guessNumber = function(n) {
 };
 ```
 ---
----
-### 8] find-the-middle-index-in-array (Difficulty -> easy)
+### 9] find-the-middle-index-in-array (Difficulty -> easy)
 
 ### Complexity
 - Time complexity => O(n)
