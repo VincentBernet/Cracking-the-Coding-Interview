@@ -3,6 +3,46 @@ Starting my preparation for coding interview : So let's first dig into data stru
 Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
+### 11] Product of Array Except Self (Difficulty -> medium)
+
+### Complexity
+- Time complexity => O(n)
+
+- Space complexity => O(n)
+
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var productExceptSelf = function(nums) {
+    // Without the restriction on division operation
+    // Calculate the multiplication of all variable in nums
+    let multiNums = 1;
+    let numberOf0 = 0;
+    for (number of nums) {
+        if (number === 0) {
+            numberOf0++;
+        } else {
+            multiNums *= number;
+        }
+    }
+    let result = [];
+    for (number of nums) {
+        if (number === 0 && numberOf0 === 1) {
+            result.push(multiNums)
+        }
+        else if (numberOf0 >= 1) {
+            result.push(0);
+        }
+        else {
+            result.push(multiNums / number);
+        }
+    }
+    return result;
+};
+---
 ### 10] Guess Number Higher or Lower (Difficulty -> easy)
 
 ### Complexity
