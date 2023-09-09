@@ -47,6 +47,7 @@ var productExceptSelf = function(nums) {
     }
     return resultArray;
 };
+```
 ---
 ### 11] Product of Array Except Self (Difficulty -> medium) Not a perfect answer
 
@@ -87,6 +88,7 @@ var productExceptSelf = function(nums) {
     }
     return result;
 };
+```
 ---
 ### 10] Guess Number Higher or Lower (Difficulty -> easy)
 
