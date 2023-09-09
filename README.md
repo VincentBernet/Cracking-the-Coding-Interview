@@ -3,14 +3,59 @@ Starting my preparation for coding interview : So let's first dig into data stru
 Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
-### 11] Product of Array Except Self (Difficulty -> medium)
+### 12] Product of Array Except Self (Difficulty -> medium) Better way
+
+### Complexity
+- Time complexity => O(n)
+
+- Space complexity => O(n)
+Could do a solution with constant space complexity (by using the output Array directly and without passing by 2 intermediate array.
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var productExceptSelf = function(nums) {
+    // T => O(n); S => O(n), could do a version with constant space complexity
+    // Calculate multiplication left to right, the "prefix array"
+    let fromLeftArray = []
+    for (i=0; i < nums.length; i++) {
+        let numberToPush = i===0 ? 
+            nums[i] : fromLeftArray[i-1] * nums[i];
+        fromLeftArray.push(numberToPush);
+    }
+    // Calculate multiplication right to left, the "suffix array"
+    let fromRightArray = nums;
+    for (j = nums.length-1; j >= 0; j--) {
+        let numberToAdd = j === nums.length-1 ? 
+            nums[j] : fromRightArray[j+1] * nums[j];
+        fromRightArray[j] = numberToAdd;
+    }
+    let resultArray = [];
+    // Multiply each array to obtain final array
+    for (i=0; i < nums.length; i++) {
+        if (i === 0) {
+            numberToPush = fromRightArray[i+1];
+        }
+        else if (i === nums.length-1) {
+            numberToPush = fromLeftArray[i-1];
+        }
+        else {
+            numberToPush = (fromLeftArray[i-1]) * (fromRightArray[i+1]);
+        }
+        resultArray.push(numberToPush);
+    }
+    return resultArray;
+};
+---
+### 11] Product of Array Except Self (Difficulty -> medium) Not a perfect answer
 
 ### Complexity
 - Time complexity => O(n)
 
 - Space complexity => O(n)
 
-
+But there i used the / operator, one of the constraint was to not use it, will do a version without it tommorow
 ```javascript
 /**
  * @param {number[]} nums
