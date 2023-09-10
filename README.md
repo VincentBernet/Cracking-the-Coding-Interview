@@ -3,7 +3,7 @@ Starting my preparation for coding interview : So let's first dig into data stru
 Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
-### 13] Maximum Average Subarray I (Difficulty -> easy)
+### 14] N-th Tribonacci Number (Difficulty -> easy)
 
 ### Complexity
 - Time complexity => O(n)
@@ -12,21 +12,16 @@ Always aim for O(log(n)) complexity algorithm.
 
 ```javascript
 /**
- * @param {number[]} nums
- * @param {number} k
+ * @param {number} n
  * @return {number}
  */
-var findMaxAverage = function(nums, k) {
-    let sum = 0;
-    for (i=0; i < k; i++) {
-        sum += nums[i]
+var tribonacci = function(n) {
+    let tribonacciSequence = [0, 1, 1];
+    for (let i = tribonacciSequence.length; i <= n; i++)  {
+      let numberToAdd = tribonacciSequence[i-3] + tribonacciSequence[i-2] + tribonacciSequence[i-1];
+      tribonacciSequence.push(numberToAdd);
     }
-    let max = sum / k
-    for (i=k; i < nums.length; i++) {
-        sum += nums[i] - nums[i - k]
-        max = Math.max(max, sum / k)
-    }
-    return max;
+    return tribonacciSequence[n];
 };
 ```
 ---
