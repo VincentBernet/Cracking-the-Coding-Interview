@@ -30,6 +30,33 @@ var findMaxAverage = function(nums, k) {
 };
 ```
 ---
+### 13] Maximum Average Subarray I (Difficulty -> easy)
+
+### Complexity
+- Time complexity => O(n)
+
+- Space complexity => O(1)
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var findMaxAverage = function(nums, k) {
+    let sum = 0;
+    for (i=0; i < k; i++) {
+        sum += nums[i]
+    }
+    let max = sum / k
+    for (i=k; i < nums.length; i++) {
+        sum += nums[i] - nums[i - k]
+        max = Math.max(max, sum / k)
+    }
+    return max;
+};
+```
+---
 ### 12] Product of Array Except Self (Difficulty -> medium) Better way
 
 ### Complexity
