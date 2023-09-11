@@ -1,5 +1,6 @@
 # Cracking-the-Coding-Interview
 Starting my preparation for coding interview : So let's first dig into data structure algorithm.
+
 Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
 
@@ -58,7 +59,7 @@ var findMaxAverage = function(nums, k) {
 - Time complexity => O(n)
 
 - Space complexity => O(n)
-Could do a solution with constant space complexity (by using the output Array directly and without passing by 2 intermediate array.
+Could do a solution with constant space complexity (by using the output Array directly and without passing by 2 intermediate array).
 ```javascript
 /**
  * @param {number[]} nums
