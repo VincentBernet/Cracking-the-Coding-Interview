@@ -3,7 +3,29 @@ Starting my preparation for coding interview : So let's first dig into data stru
 
 Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
+---
+### 15] N-th Tribonacci Number (Difficulty -> easy)
 
+### Complexity
+- Time complexity => O(n)
+
+- Space complexity => O(1)
+
+```javascript
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var tribonacci = function(n) {
+    let tribonacciSequence = [0, 1, 1];
+    for (let i = tribonacciSequence.length; i <= n; i++)  {
+      let numberToAdd = tribonacciSequence[i-3] + tribonacciSequence[i-2] + tribonacciSequence[i-1];
+      tribonacciSequence.push(numberToAdd);
+    }
+    return tribonacciSequence[n];
+};
+```
+---
 ---
 ### 14] N-th Tribonacci Number (Difficulty -> easy)
 
