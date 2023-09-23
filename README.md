@@ -1,28 +1,47 @@
 # Cracking-the-Coding-Interview
 Starting my preparation for coding interview : So let's first dig into data structure algorithm.
-d
+
 Goal : During this preparation, aim for one DSA per day !
 Always aim for O(log(n)) complexity algorithm.
----
-### 15] N-th Tribonacci Number (Difficulty -> easy)
+### 15] Contains Duplicate (Difficulty -> easy)
 
 ### Complexity
+With hashMap :
 - Time complexity => O(n)
+
+- Space complexity => O(n)
+
+With two loop imbricated :
+- Time complexity => O(n²)
 
 - Space complexity => O(1)
 
 ```javascript
 /**
- * @param {number} n
- * @return {number}
+ * @param {number[]} nums
+ * @return {boolean}
  */
-var tribonacci = function(n) {
-    let tribonacciSequence = [0, 1, 1];
-    for (let i = tribonacciSequence.length; i <= n; i++)  {
-      let numberToAdd = tribonacciSequence[i-3] + tribonacciSequence[i-2] + tribonacciSequence[i-1];
-      tribonacciSequence.push(numberToAdd);
+var containsDuplicate = function(nums) {
+    // Brute force strategy, TC: O(n) = n², SC: O(n) = 1
+    /*
+    for (i=0; i < nums.length; i++) {
+        for(y=i+1; y < nums.length; y++) {
+            if (nums[i] === nums[y]) {
+                return true;
+            }
+        }
     }
-    return tribonacciSequence[n];
+    return false;
+    */
+    // Using an hashMap, TC: O(n) = n, SC: O(n) = n
+    let hashMap = new Set();
+    for (num of nums) {
+        if (hashMap.has(num)) {
+            return true;
+        }
+        hashMap.add(num);
+    }
+    return false;
 };
 ```
 ---
